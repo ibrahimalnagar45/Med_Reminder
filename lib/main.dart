@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:remindme/features/auth/presentation/views/auth_view.dart';
 import 'package:remindme/features/home/presentation/views/home_view.dart';
- 
+import 'package:remindme/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:remindme/utils/app_fonts.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,14 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Remind Me',
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
-      home: HomeView(),
+      theme: ThemeData(fontFamily: AppFonts.primaryFont),
+      // home: HomeView()
+      home:   OnboardingView(),
       // home: AuthView(),
     );
   }
